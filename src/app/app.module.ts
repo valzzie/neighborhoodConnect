@@ -1,18 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
+import { EventsService } from './services/events.service';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { HomePageComponent } from './home-page/home-page.component';
+import { EventsListComponent } from './events-list/events-list.component';
+import { EventDetailsComponent } from './event-details/event-details.component';
+import { NeighborsComponent } from './neighbors/neighbors.component';
+import { NeighborDetailsComponent } from './neighbor-details/neighbor-details.component';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    EventsListComponent,
+    EventDetailsComponent,
+    NeighborsComponent,
+    NeighborDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpModule,
+    // NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    EventsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

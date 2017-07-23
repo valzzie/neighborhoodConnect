@@ -1,0 +1,50 @@
+<section>
+  <h3> Inputs in Angular </h3>
+
+  <label for="user-name-input"> What's your name? </label>
+  <input  id="user-name-input" type="text" placeholder="Dr. Seuss"
+          [(ngModel)]="userName">
+          <!-- store user's name in the "userName" variable -->
+  <br>
+
+  <h3 *ngIf="userName">
+    Hello, {{ userName }}!
+  </h3>
+
+  <p> {{ message }} </p>
+
+  <!-- store user's selection in the "mySelection" variable
+       ("ngModel" won't work unless you import "FormsModule" in "app.module.ts") -->
+  <select [(ngModel)]="mySelection"
+          (change)="reactToSelection()">
+    <option value=""> Click to see options </option>
+    <option value="ketchup"> Chicken and Pasta (with Ketchup) </option>
+    <option value="bell"> Taco Bell </option>
+    <option value="sushi"> Sushi </option>
+    <option value="las"> Lasagna </option>
+    <option value="cev"> Ceviche </option>
+    <option value="mojo"> Mojo Pork </option>
+  </select>
+
+
+  <div>
+    <h3> What product do you need right now? </h3>
+
+    <label for="title-input"> Product Name </label>
+    <input  id="title-input" type="text" placeholder="Amazon Echo"
+        [(ngModel)]="theProduct.title">
+    <br>
+
+    <label for="price-input"> Product Price </label>
+    <input  id="price-input" type="number" step="0.10" placeholder="189.99"
+        [(ngModel)]="theProduct.price">
+    <br>
+
+    <label   for="description-input"> Description </label>
+    <textarea id="description-input"
+        [(ngModel)]="theProduct.description"></textarea>
+    <br>
+
+    <button (click)="createProduct()"> Submit </button>
+  </div>
+</section>

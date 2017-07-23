@@ -1,0 +1,61 @@
+.text-center {
+  text-align: center;
+}
+.page-header{
+  margin-top:5%;
+}
+h1{
+  font-size:50px;
+}
+html,
+body,
+.view {
+    height: 100%;
+        padding-top: 495px;
+
+}
+
+
+.view {
+    background: url("/assets/images/city-2042634.png")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.view img {
+  width:100%;
+}
+
+.jumbotron{
+  /*height:10%;*/
+}
+/*.wide {
+  width:100%;
+  height:100%;
+  height:calc(100% - 1px);
+  background-image: url('/assets/images/city-2042634.png');
+  background-size:cover;
+  background-color: red;
+}
+
+.view img {
+  width:100%;
+}
+
+.logo {
+  color:#fff;
+  font-weight:800;
+  font-size:14pt;
+  padding:25px;
+  text-align:center;
+}
+
+.line {
+  padding-top:20px;
+  white-space:no-wrap;
+  overflow:hidden;
+  text-align:center;
+}*/
