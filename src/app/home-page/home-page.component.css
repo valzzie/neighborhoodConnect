@@ -2,20 +2,47 @@
   text-align: center;
 }
 .page-header{
+  margin-bottom:-3%;
+  padding-bottom: 0px;
   margin-top:5%;
+  border-style: none;
 }
 h1{
-  font-size:50px;
+  font-size:73px;
+  font-family: 'Passion One', cursive;
 }
 html,
 body,
 .view {
     height: 100%;
-        padding-top: 495px;
+    /*padding-top: 364px;*/
+    padding-top:26%;
 
 }
 
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    /*margin-left: -95px;*/
+    margin-left: -25%;
+}
 
+.mybuttons{
+  margin-bottom: 10%;
+  text-align: center;
+  margin-left: 3%;
+}
+
+/*.btn .btn-primary .btn-lg{
+margin-right: 40px;
+
+}*/
+.btn{
+  border-color: turquoise;
+  width: 11%;
+}
+.btn-lg{
+  /*margin-right: 40px;*/
+  margin-right: 3%;
+}
 .view {
     background: url("/assets/images/city-2042634.png")no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -30,32 +57,5 @@ body,
 }
 
 .jumbotron{
-  /*height:10%;*/
+  height:10%;
 }
-/*.wide {
-  width:100%;
-  height:100%;
-  height:calc(100% - 1px);
-  background-image: url('/assets/images/city-2042634.png');
-  background-size:cover;
-  background-color: red;
-}
-
-.view img {
-  width:100%;
-}
-
-.logo {
-  color:#fff;
-  font-weight:800;
-  font-size:14pt;
-  padding:25px;
-  text-align:center;
-}
-
-.line {
-  padding-top:20px;
-  white-space:no-wrap;
-  overflow:hidden;
-  text-align:center;
-}*/

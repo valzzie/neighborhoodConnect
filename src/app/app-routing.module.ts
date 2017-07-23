@@ -14,6 +14,14 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
+    path: 'api/signup',
+    component: HomePageComponent
+  },
+  {
+    path: 'api/login',
+    component: HomePageComponent
+  },
+  {
     path: 'api/events',
     component: EventsListComponent
   },
