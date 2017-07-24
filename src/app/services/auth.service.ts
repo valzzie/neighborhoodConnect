@@ -4,9 +4,9 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AuthService {
-private httpThang: Http
-  constructor(
 
+  constructor(
+    private httpThang: Http
   ) { }
   // an argument for each "req.body" in the API route
   signup(theFullName, theEmail, thePassword, theZipcode, thePhoto, theMore) {

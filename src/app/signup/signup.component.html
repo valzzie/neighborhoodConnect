@@ -25,7 +25,7 @@
     <br>
 
     <label for="zipcode-input"> Zipcode </label>
-    <input  id="zipcode-input" type="number" placeholder="12345"
+    <input  id="zipcode-input" type="text" placeholder="12345"
         [(ngModel)]="zipcodeValue" name="zipcodeValue">
     <br>
 
@@ -41,8 +41,26 @@
 
     <button> Sign Up </button>
   </form>
+<!-- //**********************************************************template to use is below
+<div class="formcontainer">
+<form>
+  <div class="form-group">
+    <label for="contact-name">Contact Name</label>
+    <input type="text" [(ngModel)]="newContact.name" name="blah" class="form-control"  placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="contact-email">Email address</label>
+    <input type="text" [(ngModel)]="newContact.email"  name="blah" class="form-control" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="contact-phone">Phone Number</label>
+    <input type="text" [(ngModel)]="newContact.phoneNumber"  name="blah" class="form-control"  placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="contact-image">Image</label>
+    <input type="text" name="blah" [(ngModel)]="newContact.image">
 
-
-
-
-    <button> Log In </button>
+  </div>
+  <button (click)="addContact()" class="btn btn-default">Submit New Contact</button>
+</form>
+<div> -->

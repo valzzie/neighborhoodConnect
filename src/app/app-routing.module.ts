@@ -24,6 +24,10 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'logout',
+    component: LoginComponent
+  },
+  {
     path: 'api/events',
     component: EventsListComponent
   },

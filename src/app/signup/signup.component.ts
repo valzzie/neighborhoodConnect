@@ -13,7 +13,7 @@ export class SignupComponent implements OnInit {
     fullNameValue: string;
     emailValue: string;
     passwordValue: string;
-    zipcodeValue: number;
+    zipcodeValue: string;
     photoValue: string;
     moreValue: string;
 
@@ -23,9 +23,11 @@ export class SignupComponent implements OnInit {
     loginPassword: string;
 
     loginErrorMessage: string;
-  constructor() { }
-  private authThang: AuthService;
-  private routerThang: Router
+  constructor(
+    private authThang: AuthService,
+    private routerThang: Router
+  ) { }
+
   ngOnInit() {
     this.authThang.checklogin()
       // If success, we are logged in.
@@ -40,6 +42,7 @@ export class SignupComponent implements OnInit {
   }
 
   doSignUp(){
+    // console.log("I'm in doSign Up");
     //fill this in from users-angular
     this.authThang.signup(this.fullNameValue, this.emailValue, this.passwordValue, this.zipcodeValue, this.photoValue, this.moreValue)
       .then((resultFromApi) => {
@@ -47,7 +50,7 @@ export class SignupComponent implements OnInit {
           this.fullNameValue = "";
           this.emailValue = "";
           this.passwordValue = "";
-          this.zipcodeValue;
+          this.zipcodeValue= "";
           this.photoValue = "";
           this.moreValue = "";
           // clear error message
@@ -57,31 +60,10 @@ export class SignupComponent implements OnInit {
           this.routerThang.navigate(['/events']);
   })//closes the doSignUp function
   .catch((err) => {
+    // console.log("I'm in err", err);
       const parsedError = err.json();
       this.errorMessage = parsedError.message;
   });
   } // close doSignUp()
-
-  doLogin() {
-  this.authThang.login(this.loginEmail, this.loginPassword)
-  .then((resultFromApi) => {
-      // clear the form
-      this.loginEmail = "";
-      this.loginPassword = "";
-
-      // clear the error message
-      this.loginErrorMessage = "";
-
-      // redirect to /camels
-      this.routerThang.navigate(['/events']);
-  })
-  .catch((err) => {
-      const parsedError = err.json();
-      this.loginErrorMessage = parsedError.message;
-  });
-  } // close doLogin()
-
-
-
 
   }
