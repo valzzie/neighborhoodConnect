@@ -5,6 +5,8 @@ import { EventsListComponent } from './events-list/events-list.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { NeighborsComponent } from './neighbors/neighbors.component';
 import { NeighborDetailsComponent } from './neighbor-details/neighbor-details.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
 
@@ -14,12 +16,12 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-    path: 'api/signup',
-    component: HomePageComponent
+    path: 'signup',
+    component: SignupComponent
   },
   {
-    path: 'api/login',
-    component: HomePageComponent
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'api/events',

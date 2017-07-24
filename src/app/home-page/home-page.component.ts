@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { RouterLink} from '@angular/router';
+
+
 @Component({
   selector: 'home-page',
   templateUrl: './home-page.component.html',
@@ -7,22 +9,11 @@ import { AuthService } from '../services/auth.service';
 })
 export class HomePageComponent implements OnInit {
 
-  //update variables from the homepage html
+  constructor() {
 
-  fullNameValue: string;
-  emailValue: string;
-  passwordValue: string;
-  constructor(
-      private authThang: AuthService
-  ) { }
-
-  ngOnInit() {
-    console.log('hi');
   }
 
-  doSignUp(){
+  ngOnInit() {
 
-    //fill this in from users-angular
-
-  }//closes the doSignUp function
+  }
 }

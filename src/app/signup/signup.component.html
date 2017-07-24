@@ -1,0 +1,48 @@
+<p>
+  signup works!
+</p>
+
+  <h3> Sign Up </h3>
+
+  <p *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </p>
+
+  <form (ngSubmit)="doSignUp()">
+    <label for="full-name-input"> Full Name </label>
+    <input  id="full-name-input" type="text" placeholder="Blanche Bourbon"
+        [(ngModel)]="fullNameValue" name="fullNameValue">
+    <br>
+
+    <label for="email-input"> Email </label>
+    <input  id="email-input" type="email" placeholder="blah@example.com"
+        [(ngModel)]="emailValue" name="emailValue">
+    <br>
+
+    <label for="password-input"> Password </label>
+    <input  id="password-input" type="password" placeholder="*****"
+        [(ngModel)]="passwordValue" name="passwordValue">
+    <br>
+
+    <label for="zipcode-input"> Zipcode </label>
+    <input  id="zipcode-input" type="number" placeholder="12345"
+        [(ngModel)]="zipcodeValue" name="zipcodeValue">
+    <br>
+
+    <label for="photo-input"> Photo </label>
+    <input  id="photo-input" type="file" placeholder=""
+        [(ngModel)]="photoValue" name="photoValue">
+    <br>
+
+    <label for="more-input"> Tell us more about you </label>
+    <input  id="more-input" type="text" placeholder=""
+        [(ngModel)]="moreValue" name="moreValue">
+    <br>
+
+    <button> Sign Up </button>
+  </form>
+
+
+
+
+    <button> Log In </button>

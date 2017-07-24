@@ -13,6 +13,8 @@ import { EventsListComponent } from './events-list/events-list.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { NeighborsComponent } from './neighbors/neighbors.component';
 import { NeighborDetailsComponent } from './neighbor-details/neighbor-details.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { NeighborDetailsComponent } from './neighbor-details/neighbor-details.co
     EventsListComponent,
     EventDetailsComponent,
     NeighborsComponent,
-    NeighborDetailsComponent
+    NeighborDetailsComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
