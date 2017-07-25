@@ -4,7 +4,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AuthService {
-
+BASE_URL: string = 'http://localhost:3000';
   constructor(
     private httpThang: Http
   ) { }
@@ -94,5 +94,12 @@ export class AuthService {
         // Parse the JSON
         .then(res => res.json());
   } // close checklogin()
+
+  getNeighborList() {
+    return this.httpThang.get(`${this.BASE_URL}/api/neighbors`)
+    //take magical array i receive and turn it into json which we use
+      .map((res) =>  res.json());
+  }
+
 
   }

@@ -40,6 +40,8 @@
     <label for="photo-input"> Photo </label>
     <input  id="photo-input" type="file" placeholder=""
         [(ngModel)]="photoValue" name="photoValue">
+        <!-- //added this for uploading images -->
+        ng2FileSelect [uploader]="myCoolUploader">
     <br>
 
     <label for="more-input"> Tell us more about you </label>
@@ -52,6 +54,8 @@
 </div>
 </div>
 </div>
+---------------------
+
 <!-- //**********************************************************template to use is below
 <div class="formcontainer">
 <form>

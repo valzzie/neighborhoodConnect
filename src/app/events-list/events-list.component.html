@@ -1,5 +1,5 @@
 <h1> Hollywood Community Event Calendar </h1>
-    
+
     <div class="contactcontainer container">
   <div class="row">
 
@@ -7,7 +7,8 @@
       <div class="col-sm-4" *ngFor="let event of events">
 
         <li>
-          <img src={{event.photoUrl}}>
+          <!-- <img *ngIf="event.photoUrl" [src]="'http://localhost:3000' + event.photoUrl"> -->
+          <p>{{event.photoUrl}}</p>
           <p>{{event.eventName}}</p>
           <p>{{event.eventLocation}}</p>
           <p>{{event.eventDate}}</p>
@@ -16,8 +17,11 @@
           <p>{{event.aboutEvent}}</p>
         </li>
 
+
       </div>
     </ul>
 
-  </div>
+
+
+</div>
 </div>

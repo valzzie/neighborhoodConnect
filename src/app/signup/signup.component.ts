@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { FileUploader } from 'ng2-file-upload';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -23,6 +24,11 @@ export class SignupComponent implements OnInit {
     loginPassword: string;
 
     loginErrorMessage: string;
+
+    myCoolUploader = new FileUploader({
+     url: 'http://localhost:3000/api/neighbors'
+     });
+
   constructor(
     private authThang: AuthService,
     private routerThang: Router
