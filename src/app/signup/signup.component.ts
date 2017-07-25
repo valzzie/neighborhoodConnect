@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
     this.authThang.checklogin()
       // If success, we are logged in.
       .then((resultFromApi) => {
-          this.routerThang.navigate(['/events']);
+          this.routerThang.navigate(['api/events']);
       })
 
       // Even if you don't do anything on error, catch to avoid a console error.
@@ -57,7 +57,7 @@ export class SignupComponent implements OnInit {
           this.errorMessage = "";
 
           // redirect to /camels
-          this.routerThang.navigate(['/events']);
+          this.routerThang.navigate(['api/events']);
   })//closes the doSignUp function
   .catch((err) => {
     // console.log("I'm in err", err);
