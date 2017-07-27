@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class AuthService {
-BASE_URL: string = 'http://localhost:3000';
+BASE_URL: string = environment.apiBase;
   constructor(
     private httpThang: Http
   ) { }
@@ -12,7 +13,7 @@ BASE_URL: string = 'http://localhost:3000';
   signup(theFullName, theEmail, thePassword, theZipcode, thePhoto, theMore) {
       return this.httpThang
         .post(
-          'http://localhost:3000/api/signup',
+          environment.apiBase + '/api/signup',
 
           // Form body information to send to the back end (req.body)
           {
@@ -39,7 +40,7 @@ BASE_URL: string = 'http://localhost:3000';
   login(theEmail, thePassword) {
       return this.httpThang
         .post(
-          'http://localhost:3000/api/login',
+          environment.apiBase + '/api/login',
 
           // Form body information to send to the back end (req.body)
           {
@@ -62,7 +63,7 @@ BASE_URL: string = 'http://localhost:3000';
   logout() {
       return this.httpThang
         .post(
-          'http://localhost:3000/api/logout',
+          environment.apiBase + '/api/logout',
 
           // Nothing to send to the back end (req.body)
           {},
@@ -82,7 +83,7 @@ BASE_URL: string = 'http://localhost:3000';
   checklogin() {
       return this.httpThang
         .get(
-          'http://localhost:3000/api/checklogin',
+          environment.apiBase + '/api/checklogin',
 
           // Send the cookies across domains
           { withCredentials: true }

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-
+import {environment} from '../../environments/environment';
 @Injectable()
 export class EventsService {
-BASE_URL: string = 'http://localhost:3000';
+BASE_URL: string = environment.apiBase;
 
   constructor(private myHttp: Http) { }
 
@@ -14,5 +14,11 @@ BASE_URL: string = 'http://localhost:3000';
       .map((res) =>  res.json());
   }
 
+  getOne (id) {
 
+    let endPoint = "api/events/"+id
+    //myHttp needs to match what i called it on lined10 in constructor
+    return this.myHttp.get(`${this.BASE_URL}/api/events/${id}`)
+        .map((res) =>  res.json());
+  }
   }

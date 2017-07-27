@@ -25,14 +25,15 @@ const routes: Routes = [
   },
   {
     path: 'logout',
-    component: LoginComponent
+    component: HomePageComponent
   },
   {
     path: 'api/events',
     component: EventsListComponent
   },
   {
-    path: 'api/eventdetails',
+    //eventdetails component is populated by neighbors attending that specific event.
+    path: 'api/eventdetails/:myId',
     component: EventDetailsComponent
   },
   {
@@ -42,7 +43,8 @@ const routes: Routes = [
   {
     path: 'api/neighbordetails',
     component: NeighborDetailsComponent
-  }
+  },
+
 ];
 
 @NgModule({

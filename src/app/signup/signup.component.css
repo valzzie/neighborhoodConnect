@@ -1,0 +1,32 @@
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    /*margin-left: -95px;*/
+    margin-left: -25%;
+}
+
+
+
+.largecenter {
+  background-image: url("/assets/images/house-313396_1280.jpg");
+  /*background: url("/assets/images/city-2042634.png")no-repeat center center fixed;*/
+  background-size: 100%;
+  border: 1px solid black;
+  width: 100%;
+  height:1000px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.smallcenter{
+width: 60%;
+/*height: 30%;*/
+text-align: center;
+}
+/*.smallcenter h1{
+  color: #FFF;
+    font-size: 85px;
+}
+.smallcenter p{
+  color: #FFF;
+    font-size: 33px;
+}*/
