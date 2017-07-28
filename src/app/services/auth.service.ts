@@ -101,6 +101,26 @@ BASE_URL: string = environment.apiBase;
     //take magical array i receive and turn it into json which we use
       .map((res) =>  res.json());
   }
+//added these last 3 as well in case neighbor wants to make changes.
+  getOneNeighbor (myId) {
 
+    let endPoint = "api/neighbors/"+ myId
+    //myHttp needs to match what i called it on lined10 in constructor
+    return this.httpThang.get(`${this.BASE_URL}/api/neighbors/${myId}`)
+        .map((res) =>  res.json());
+  }
 
+  //aka: editOne()
+  //infoTo post is the this.characterToCreateOrEdit which is second parameter of EditOne()
+  // changeNeighborinDatabase(myId,infoToPost){
+  //   let endPoint = "api/neighbors/"+myId;
+  //   return this.httpThang.post(this.BASE_URL+endPoint, infoToPost)
+  // }
+  //
+  // deleteOne (myId) {
+  //   let endPoint = "/api/neighbors"+myId;
+  //   //myHttp needs to match what i called it on lined10 in constructor
+  //   return this.httpThang.delete(this.BASE_URL+endPoint)
+  //
+  // }
   }

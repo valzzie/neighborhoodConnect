@@ -15,7 +15,7 @@ import { NeighborsComponent } from './neighbors/neighbors.component';
 import { NeighborDetailsComponent } from './neighbor-details/neighbor-details.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
-import { FileSelectDirective } from 'ng2-file-upload';
+import { FileUploadModule } from 'ng2-file-upload';
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
@@ -27,13 +27,13 @@ import { FileSelectDirective } from 'ng2-file-upload';
     NeighborDetailsComponent,
     SignupComponent,
     LoginComponent,
-    FileSelectDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpModule,
+    FileUploadModule
     // NgbModule.forRoot()
   ],
   providers: [

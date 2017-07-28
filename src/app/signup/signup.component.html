@@ -24,20 +24,20 @@
 </div>
 <!-- ////////////////////////// -->
 <div class="largecenter">
-  <div class='smallcenter contactcontainer container'>
-    <!-- <h1>Music for everyone.</h1>
-    <p>Spotify is now free on mobile, tablet and computer.<br>
-    Listen to the right music, wherever you are.</p> -->
+  <div class='smallcenter contactcontainer container login-block'>
     <h3> Sign Up </h3>
-
     <p *ngIf="errorMessage" class="error">
       {{ errorMessage }}
     </p>
 
-    <form (ngSubmit)="doSignUp()">
-      <label for="full-name-input"> Full Name </label>
+    <form class="form-horizontal" (ngSubmit)="doSignUp()">
+<!-- <div class= "form-group"> -->
+      <label for="full-name-input"> Name </label>
+      <!-- <div class="col-xs-10"> -->
       <input  id="full-name-input" type="text" placeholder="Blanche Bourbon"
           [(ngModel)]="fullNameValue" name="fullNameValue">
+        <!-- </div>
+      </div> -->
       <br>
 
       <label for="email-input"> Email </label>
@@ -55,49 +55,17 @@
           [(ngModel)]="zipcodeValue" name="zipcodeValue">
       <br>
 
-      <label for="photo-input"> Photo </label>
-      <input  id="photo-input" type="file" placeholder=""
-          [(ngModel)]="photoValue" name="photoValue">
-          <!-- //added this for uploading images -->
-          ng2FileSelect [uploader]="myCoolUploader">
-      <br>
-
       <label for="more-input"> Tell us more about you </label>
       <input  id="more-input" type="text" placeholder=""
           [(ngModel)]="moreValue" name="moreValue">
-      <br>
 
+          <label for="photo-input"> Photo (required) </label>
+          <input  id="photo-input" type="file" placeholder=""
+              [(ngModel)]="photoValue" name="photoValue" ng2FileSelect [uploader]="myCoolUploader">
+          <br>
+          <!-- //trying to make it look prettier -->
+          
       <button> Sign Up </button>
     </form>
   </div>
 </div>
-
-
-<!-- <img src="/assets/images/house-313396_1280.jpg" class="img-fluid" alt="Responsive image"> -->
-
-
-
-
-<!-- //**********************************************************template to use is below
-<div class="formcontainer">
-<form>
-  <div class="form-group">
-    <label for="contact-name">Contact Name</label>
-    <input type="text" [(ngModel)]="newContact.name" name="blah" class="form-control"  placeholder="Name">
-  </div>
-  <div class="form-group">
-    <label for="contact-email">Email address</label>
-    <input type="text" [(ngModel)]="newContact.email"  name="blah" class="form-control" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label for="contact-phone">Phone Number</label>
-    <input type="text" [(ngModel)]="newContact.phoneNumber"  name="blah" class="form-control"  placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="contact-image">Image</label>
-    <input type="text" name="blah" [(ngModel)]="newContact.image">
-
-  </div>
-  <button (click)="addContact()" class="btn btn-default">Submit New Contact</button>
-</form>
-<div> -->

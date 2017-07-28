@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { FileUploader } from 'ng2-file-upload';
+import {environment} from '../../environments/environment'
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -26,7 +27,9 @@ export class SignupComponent implements OnInit {
     loginErrorMessage: string;
 
     myCoolUploader = new FileUploader({
-     url: 'http://localhost:3000/api/neighbors'
+     url: environment.apiBase + '/api/signup',
+     //refer to image as profileImage in backend.
+     itemAlias: 'profileImage'
      });
 
   constructor(
@@ -48,28 +51,36 @@ export class SignupComponent implements OnInit {
   }
 
   doSignUp(){
-    // console.log("I'm in doSign Up");
-    //fill this in from users-angular
-    this.authThang.signup(this.fullNameValue, this.emailValue, this.passwordValue, this.zipcodeValue, this.photoValue, this.moreValue)
-      .then((resultFromApi) => {
-          // clear form
-          this.fullNameValue = "";
-          this.emailValue = "";
-          this.passwordValue = "";
-          this.zipcodeValue= "";
-          this.photoValue = "";
-          this.moreValue = "";
-          // clear error message
-          this.errorMessage = "";
+    this.myCoolUploader.onBuildItemForm= (item,form) => {
+      form.append("signupFullName", this.fullNameValue);
+      form.append("signupEmail", this.emailValue);
+      form.append("signupPassword", this.passwordValue);
+      form.append("signupZipcode", this.zipcodeValue);
+      form.append("signupMore", this.moreValue);
+    };
 
-          // redirect to /camels
-          this.routerThang.navigate(['api/events']);
-  })//closes the doSignUp function
-  .catch((err) => {
-    // console.log("I'm in err", err);
-      const parsedError = err.json();
+    this.myCoolUploader.onSuccessItem= (item, form) => {
+      // clear form
+       this.fullNameValue = "";
+       this.emailValue = "";
+       this.passwordValue = "";
+       this.zipcodeValue= "";
+       this.photoValue = "";
+       this.moreValue = "";
+       // clear error message
+       this.errorMessage = "";
+       // redirect to /camels
+       this.routerThang.navigate(['api/events']);
+    };
+
+    this.myCoolUploader.onErrorItem = (item, response) => {
+      const parsedError = JSON.parse(response);
       this.errorMessage = parsedError.message;
-  });
-  } // close doSignUp()
+    };
+
+    this.myCoolUploader.uploadAll();
+  }
 
   }
+
+    

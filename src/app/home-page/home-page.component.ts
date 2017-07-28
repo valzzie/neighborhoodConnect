@@ -16,4 +16,11 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
 
   }
+
+  login(){
+
+  }
+  signup(){
+    
+  }
 }
