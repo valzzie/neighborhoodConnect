@@ -1,0 +1,110 @@
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: -25%;
+}
+
+#each{
+  border: 5px solid turquoise !important;
+}
+.contactcontainer {
+  margin-top: 50px !important;
+}
+btn{
+  color: turquoise;
+  width: 11%;
+}
+.btn-lg{
+  /*margin-right: 40px;*/
+  /*margin-right: 3%;*/
+  text-align: center;
+}
+
+.thumbnail{
+  border: 5px solid turquoise !important;
+}
+
+#h1{
+
+  font-family: 'Passion One', cursive !important;
+
+  font-size: 3em !important;
+  text-align: center !important;
+}
+/*//*********************** using css*/
+/*body {
+  display: flex;
+ min-height: 100vh;
+ flex-direction: column;
+}
+h1{
+
+  font-family: 'Passion One', cursive !important;
+
+  font-size: 10vh !important;
+  margin-top: 12vh !important;
+  text-align: center !important;
+}
+
+
+.recipe-view{
+  margin-top: 65px;
+}
+
+#recipes-page{
+  height: 70vh;
+  ul{
+    width:100%;
+    }
+  li{
+    width:80%;
+    margin-left: 8%;
+    height: 70vh;
+    }
+}
+.row-between{
+  margin-left: 11px;
+}
+.rowspacing{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.imageblock{
+  width: 30%;
+  height:60vh;
+  border: 5px solid turquoise;
+  border-radius: 10px;
+  margin: 15px;
+  display: inline-block;
+  box-shadow: 7px 9px 33px -10px silver;
+}
+.eachrecipepic{
+  height: 70%;
+  width: 100%;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+
+#eachImg{
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.recipedesc{
+  height: 30%;
+  width: 100%;
+  text-align: center;
+  color: grey;
+  margin-top: 14px;
+}
+.recipedesc p{
+
+  font-family: 'Passion One', cursive;
+}
+span {
+    position: relative;
+    display: inline-block;
+}
+*/

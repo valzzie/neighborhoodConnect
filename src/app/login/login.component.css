@@ -1,0 +1,89 @@
+navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    /*margin-left: -95px;*/
+    margin-left: -25%;
+}
+
+.largecenter {
+  background-image: url("/assets/images/house-313396_1280.jpg");
+  /*background: url("/assets/images/city-2042634.png")no-repeat center center fixed;*/
+  background-size: 100%;
+  border: 1px solid black;
+  width: 100%;
+  height:1000px;
+  display:flex;
+  /*justify-content: center;*/
+  /*align-items:center;*/
+}
+.smallcenter{
+width: 60%;
+/*height: 30%;*/
+/*text-align: center;*/
+
+}
+
+.login-block {
+    width: 37%;
+    height: 44%;
+    padding: 20px;
+    background: #5D6D7E;
+    border-radius: 15px;
+    border: 5px solid turquoise;
+    margin: 0 auto;
+    padding-top: 4vh;
+    margin-top:19vh;
+}
+
+.login-block h3 {
+    text-align: center;
+    color: #FFF;
+  font-family: 'Passion One', cursive;
+    font-size: 8vh;
+    /*text-transform: uppercase;*/
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#photo-input{
+  border: none;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 3vh;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid turquoise;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+    margin-top: 26px;
+    background-color: turquoise;
+
+}

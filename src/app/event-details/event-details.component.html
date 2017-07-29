@@ -3,7 +3,7 @@
   event-details works!
 </p>
 
-<h1> Neighbors attending {{myEventId}} include:</h1>
+<h1> Neighbors attending {{myEventInfo.eventName}} include:</h1>
 
     <div class="contactcontainer container">
   <div class="row">
@@ -13,11 +13,11 @@
 
         <li>
           <!-- //neighbor comes from up above, names come from model -->
-          <p>{{neighbor.photoUrl}}</p>
+          <img [src]="baseUrl + neighbor.photoUrl">
           <p>{{neighbor.fullName}}</p>
           <p>{{neighbor.zipcode}}</p>
           <p>{{neighbor.tellusmore}}</p>
-          
+
           <!-- //If click then it should go to eventdetails page for that event. -->
         <!-- <button> <a [routerLink] = "['/eventdetails', event.id]"> Who's Attending? </a> </button> -->
         </li>

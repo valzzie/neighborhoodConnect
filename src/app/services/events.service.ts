@@ -15,8 +15,6 @@ BASE_URL: string = environment.apiBase;
   }
 
   getOne (myId) {
-
-    let endPoint = "api/events/"+ myId
     //myHttp needs to match what i called it on lined10 in constructor
     return this.myHttp.get(`${this.BASE_URL}/api/events/${myId}`)
         .map((res) =>  res.json());

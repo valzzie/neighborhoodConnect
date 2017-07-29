@@ -33,7 +33,7 @@ const routes: Routes = [
   },
   {
     //eventdetails component is populated by neighbors attending that specific event.
-    path: 'api/eventdetails/:myId',
+    path: 'eventdetails/:myId',
     component: EventDetailsComponent
   },
   {

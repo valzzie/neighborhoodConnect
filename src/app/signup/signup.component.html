@@ -55,7 +55,7 @@
           [(ngModel)]="zipcodeValue" name="zipcodeValue">
       <br>
 
-      <label for="more-input"> Tell us more about you </label>
+      <label for="more-input"> A little bit about you: </label>
       <input  id="more-input" type="text" placeholder=""
           [(ngModel)]="moreValue" name="moreValue">
 
@@ -63,8 +63,7 @@
           <input  id="photo-input" type="file" placeholder=""
               [(ngModel)]="photoValue" name="photoValue" ng2FileSelect [uploader]="myCoolUploader">
           <br>
-          <!-- //trying to make it look prettier -->
-          
+
       <button> Sign Up </button>
     </form>
   </div>

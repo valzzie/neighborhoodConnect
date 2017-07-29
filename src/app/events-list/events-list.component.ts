@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
 import { FileUploader } from 'ng2-file-upload';
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-events-list',
   templateUrl: './events-list.component.html',
+  styleUrls: ['./events-list.component.css'],
   providers: [EventsService]
 })
 export class EventsListComponent implements OnInit {
 events = [];
+baseUrl = environment.apiBase;
 
 myCoolUploader = new FileUploader({
  url: 'http://localhost:3000/api/events'

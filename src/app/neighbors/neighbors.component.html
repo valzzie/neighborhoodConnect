@@ -9,12 +9,9 @@
 
 
           <!-- <img src={{neighbor.photoUrl}}> -->
-          <img *ngIf="neighbor.photoUrl" [src]="'http://localhost:3000' + neighbor.photoUrl">
+          <img *ngIf="neighbor.photoUrl" [src]="baseUrl + neighbor.photoUrl">
           <p>{{neighbor.fullName}}</p>
-          <p>{{neighbor.email}}</p>
-          <p>{{neighbor.encryptedPassword}}</p>
           <p>{{neighbor.zipcode}}</p>
-          <p>{{neighbor.photoUrl}}</p>
           <p>{{neighbor.tellusmore}}</p>
 
 
