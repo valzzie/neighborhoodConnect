@@ -1,27 +1,6 @@
 
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Neighbor Connect</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a [routerLink]="['/login']">Log In</a></li>
-        <li><a [routerLink]="['/signup']">Sign Up</a></li>
-          <li><a [routerLink]="['/']">Log Out</a></li>
-        <!-- <li><a (click)="logout()">Log Out</a></li>
-        (click)="logout()"> -->
-        <!-- <li><a [routerLink]="['api/logout']">Log Out</a></li> -->
-      </ul>
-    </div>
-  </div>
-</div>
+
 <!-- ////////////////////////// -->
 <div class="largecenter">
   <div class='smallcenter contactcontainer container login-block'>
@@ -51,7 +30,7 @@
       <br>
 
       <label for="zipcode-input"> Zipcode </label>
-      <input  id="zipcode-input" type="text" placeholder="12345"
+      <input  id="zipcode-input" type="text" placeholder="30020"
           [(ngModel)]="zipcodeValue" name="zipcodeValue">
       <br>
 

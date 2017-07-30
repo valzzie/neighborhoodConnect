@@ -1,48 +1,83 @@
 
-.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-    margin-left: -25%;
+
+img{
+  width:100%;
+  height: 258px;
+}
+.caption{
+  height: 263px;
+}
+h1{
+  margin-top: 77px;
+text-align: center;
+font-size: 4.5em;
+font-family: 'Passion One', cursive;
+margin-bottom: 35px;
+}
+p{
+  margin: 10px 0 10px;
+}
+ul{
+  margin-top: 24px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: -25px;
 }
 
-#each{
-  border: 5px solid turquoise !important;
+.row{
+  margin-left: -15px;
+    margin-right: -15px;
+    border: 10px groove turquoise;
 }
-.contactcontainer {
-  margin-top: 50px !important;
-}
+
+/*#each{
+  border: 5px solid turquoise;
+}*/
+/*.contactcontainer {
+  margin-top: 50px;
+}*/
 btn{
   color: turquoise;
   width: 11%;
 }
 .btn-lg{
-  /*margin-right: 40px;*/
-  /*margin-right: 3%;*/
+border: 1px solid turquoise;
   text-align: center;
+  margin-bottom: 51px;
 }
 
-.thumbnail{
-  border: 5px solid turquoise !important;
-}
+/*.thumbnail{
+  border: 5px solid turquoise;
+}*/
 
-#h1{
+/*h1{
 
-  font-family: 'Passion One', cursive !important;
+  font-family: 'Passion One', cursive;
 
-  font-size: 3em !important;
-  text-align: center !important;
-}
+  font-size: 4em;
+  text-align: center;
+}*/
+/*ul{
+  margin-top:22px;
+}*/
 /*//*********************** using css*/
 /*body {
   display: flex;
  min-height: 100vh;
  flex-direction: column;
-}
-h1{
+ display:flex;
+}*/
+/*background-image: url("/assets/images/houses-1719055.png");
+background-size: 100%;
+border: 1px solid black;
+width: 100%;
+height:2000px;*/
+/*h1{
 
-  font-family: 'Passion One', cursive !important;
-
-  font-size: 10vh !important;
-  margin-top: 12vh !important;
-  text-align: center !important;
+  font-family: 'Passion One', cursive;
+  font-size: 4em;
+  margin-top: 12vh;
+  text-align: center;
 }
 
 
@@ -63,6 +98,7 @@ h1{
 }
 .row-between{
   margin-left: 11px;
+  margin-top:65px;
 }
 .rowspacing{
   display:flex;
@@ -73,7 +109,7 @@ h1{
 }
 .imageblock{
   width: 30%;
-  height:60vh;
+  height:90vh;
   border: 5px solid turquoise;
   border-radius: 10px;
   margin: 15px;
@@ -81,15 +117,15 @@ h1{
   box-shadow: 7px 9px 33px -10px silver;
 }
 .eachrecipepic{
-  height: 70%;
+  height: 46%;
   width: 100%;
   border-top-right-radius: 9px;
   border-top-left-radius: 9px;
 }
 
-#eachImg{
-  max-width: 100%;
-  min-width: 100%;
+img{
+
+  width: 100%
 }
 
 .recipedesc{
@@ -98,13 +134,9 @@ h1{
   text-align: center;
   color: grey;
   margin-top: 14px;
-}
-.recipedesc p{
+  margin-left: 9px;
+}*/
+/*.recipedesc p{
 
   font-family: 'Passion One', cursive;
-}
-span {
-    position: relative;
-    display: inline-block;
-}
-*/
+}*/

@@ -16,6 +16,7 @@ import { NeighborDetailsComponent } from './neighbor-details/neighbor-details.co
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { HeaderComponent } from './header/header.component';
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FileUploadModule } from 'ng2-file-upload';
     NeighborDetailsComponent,
     SignupComponent,
     LoginComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

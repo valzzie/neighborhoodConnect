@@ -15,11 +15,13 @@ import { environment } from '../../environments/environment';
 
 export class EventDetailsComponent implements OnInit {
 
+//variables used in getInfo() below
 myEventId: number;
 myEventInfo: any;
 neighbors: any;
 baseUrl = environment.apiBase;
   constructor(
+    //ActivatedRoute allows the use of params such as .myId
     private myAuthService: ActivatedRoute,
     private myEventsService: EventsService,
     private myActivatedRoute: ActivatedRoute
@@ -34,6 +36,7 @@ baseUrl = environment.apiBase;
   }
 
   getInfo() {
+    //for specific eventid get the event info and the people attending that event.
     this.myEventsService.getOne(this.myEventId).subscribe((eventInfo) => {
       console.log(eventInfo);
       this.myEventInfo = eventInfo;

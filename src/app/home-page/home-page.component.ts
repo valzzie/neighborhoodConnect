@@ -17,10 +17,5 @@ export class HomePageComponent implements OnInit {
 
   }
 
-  login(){
-
-  }
-  signup(){
-    
-  }
+  
 }

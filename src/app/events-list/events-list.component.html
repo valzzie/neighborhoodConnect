@@ -1,42 +1,19 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Neighbor Connect</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a [routerLink]="['/login']">Log In</a></li>
-        <li><a [routerLink]="['/signup']">Sign Up</a></li>
-          <li><a [routerLink]="['/']">Log Out</a></li>
-        <!-- <li><a (click)="logout()">Log Out</a></li>
-        (click)="logout()"> -->
-        <!-- <li><a [routerLink]="['api/logout']">Log Out</a></li> -->
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- //**************************** -->
 
+  <h1 id="h1" class='text-center'> Community Events In Zipcode: 30020 </h1>
     <div class="container page contactcontainer">
-      <h1 id="h1" class='text-center'> Neighbors Attending Events in: 30020 </h1>
-  <div class="row">
+      <div class="row">
 
     <ul>
       <div id="each" class="col-sm-4" *ngFor="let event of events">
 
         <li>
-          <!-- //added this -->
-          <div class="thumbnail">
+
+          <!-- <div class="thumbnail"> -->
 
 
-          <!-- //do i need this? -->
+
           <img *ngIf="event.photoUrl" [src]="baseUrl + event.photoUrl">
-          <!-- //added this -->
+
           <div class="caption">
           <p>{{event.eventName}}</p>
           <p>{{event.eventLocation}}</p>
@@ -44,18 +21,15 @@
           <p>{{event.eventTime}}</p>
           <p>{{event.zipcode}}</p>
           <p>{{event.aboutEvent}}</p>
-          <!-- //If click then it should go to eventdetails page for that event. -->
-<div class="text-center">
-      <a [routerLink] = "['/eventdetails', event._id]">  <button type="button" class="  btn btn-primary btn-lg">  Who's Attending?  </button></a>
-</div>
+<!-- //had button inside caption, trying to see if its better to move it out or not -->
       </div>
-    </div>
+			<div class="text-center">
+			      <a [routerLink] = "['/eventdetails', event._id]">  <button type="button" class="  btn btn-primary btn-lg">  Who's Attending?  </button></a>
+			</div>
+    <!-- </div> -->
         </li>
-
-
       </div>
     </ul>
-
 </div>
 </div>
 
@@ -64,19 +38,18 @@
 	<div id="wrapper">
 
 		<div id="content">
-<h1 class="header"> Community Event Calendar For: 30020 </h1>
+<h1 class="header"> Community Events In Zipcode: 30020 </h1>
 
 <section class="recipe-view" id="recipes-page">
 
-<ul class='row-between'>
+<ul rowspacing>
   <div *ngFor="let event of events">
 
     <li class='imageblock'>
 
       <div class="eachrecipepic">
-      <img id = "eachImg" *ngIf="event.photoUrl" [src]="'http://localhost:3000' + event.photoUrl">
-      <img src= {{event.photoUrl}} >
-    </div>
+      <img *ngIf="event.photoUrl" [src]="baseUrl + event.photoUrl">
+      </div>
     <div class="recipedesc">
       <p>{{event.eventName}}</p>
       <p>{{event.eventLocation}}</p>
@@ -84,15 +57,15 @@
       <p>{{event.eventTime}}</p>
       <p>{{event.zipcode}}</p>
       <p>{{event.aboutEvent}}</p>
-      //If click then it should go to eventdetails page for that event.
-    <button> <a [routerLink] = "['/eventdetails', event.id]"> Who's Attending? </a> </button>
-</div>
-    </li>
+      <a [routerLink] = "['/eventdetails', event._id]">  <button type="button" class="  btn btn-primary btn-lg">  Who's Attending?  </button></a>
+    </div>
+  </li>
   </div>
-</ul>
-  </section>
+</ul> -->
+
+  <!-- </section>
+
 
 </div>
 </div>
-</body>
- -->
+</body> -->
