@@ -29,7 +29,7 @@ baseUrl = environment.apiBase;
 
   ngOnInit() {
     this.myActivatedRoute.params.subscribe((actualParams) => {
-      console.log(actualParams.myId);
+      console.log("Actual Parmas.myId", actualParams.myId);
       this.myEventId = actualParams.myId;
       this.getInfo();
     })

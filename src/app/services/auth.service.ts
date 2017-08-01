@@ -110,13 +110,14 @@ BASE_URL: string = environment.apiBase;
         .map((res) =>  res.json());
   }
 
-  //aka: editOne()
-  //infoTo post is the this.characterToCreateOrEdit which is second parameter of EditOne()
-  // changeNeighborinDatabase(myId,infoToPost){
-  //   let endPoint = "api/neighbors/"+myId;
-  //   return this.httpThang.post(this.BASE_URL+endPoint, infoToPost)
-  // }
-  //
+  // aka: editOne()
+  // infoTo post is the this.characterToCreateOrEdit which is second parameter of EditOne()
+  changeNeighborinDatabase(myId,infoToPost){
+    let endPoint = "api/neighbors/"+myId;
+    return this.httpThang.post(this.BASE_URL+endPoint, infoToPost)
+  }
+
+  
   // deleteOne (myId) {
   //   let endPoint = "/api/neighbors"+myId;
   //   //myHttp needs to match what i called it on lined10 in constructor

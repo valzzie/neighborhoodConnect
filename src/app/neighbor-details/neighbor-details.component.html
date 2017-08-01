@@ -1,3 +1,31 @@
-<p>
-  neighbor-details works!
-</p>
+<h1 *ngIf="myNeighborInfo"> {{myNeighborInfo.fullName}} Is Also Attending: </h1>
+
+    <div class="contactcontainer container">
+  <div class="row">
+
+    <ul>
+      <div class="col-sm-4" *ngFor="let event of events">
+
+        <li>
+          <!-- //neighbor comes from up above, names come from model -->
+          <img [src]="baseUrl + event.photoUrl">
+<div class="caption">
+
+          <p>{{event.eventName}}</p>
+          <p>{{event.eventLocation}}</p>
+          <p>{{event.eventDate}}</p>
+          <p>{{event.eventTime}}</p>
+          <p>{{event.zipcode}}</p>
+          <p>{{event.aboutEvent}}</p>
+</div>
+          
+        </li>
+      </div>
+    </ul>
+
+</div>
+<div class="mybuttons">
+<button [routerLink]="['/api/events']" type="button" class="btn btn-primary btn-lg">Back To Events</button>
+</div>
+
+</div>

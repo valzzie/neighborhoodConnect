@@ -1,21 +1,28 @@
 
-<h1> Your Neighbors </h1>
+<h1> Your Neighbors In: 30020 </h1>
 
     <div class="contactcontainer container">
   <div class="row">
 
-    <!-- //ul -->
+    <ul>
       <div class="col-sm-4" *ngFor="let neighbor of neighbors">
+<li>
 
 
-          <!-- <img src={{neighbor.photoUrl}}> -->
           <img *ngIf="neighbor.photoUrl" [src]="baseUrl + neighbor.photoUrl">
+         <div class="caption">
           <p>{{neighbor.fullName}}</p>
           <p>{{neighbor.zipcode}}</p>
           <p>{{neighbor.tellusmore}}</p>
+          </div>
 
-
-      </div>
+          <div class="text-center">
+    			      <a [routerLink] = "['/neighbordetails', neighbor._id]">  <button type="button" class="  btn btn-primary btn-lg">  See All Events Attending  </button></a>
+    			</div>
+        <!-- </div> -->
+            </li>
+          </div>
+        </ul>
 
 
   </div>

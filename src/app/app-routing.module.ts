@@ -41,7 +41,7 @@ const routes: Routes = [
     component: NeighborsComponent
   },
   {
-    path: 'api/neighbordetails',
+    path: 'neighbordetails/:myId',
     component: NeighborDetailsComponent
   },
 
